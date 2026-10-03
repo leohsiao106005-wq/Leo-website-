@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>蕭立閎 Leo Hsiao | 認知科學 & 人文科技跨域個人頁面</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-color: #0b0d17;
+      --card-bg: rgba(22, 27, 46, 0.65);
+      --card-border: rgba(99, 102, 241, 0.2);
+      --primary: #6366f1;
+      --primary-glow: rgba(99, 102, 241, 0.4);
+      --accent-cyan: #06b6d4;
+      --accent-pink: #ec4899;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --font-code: 'Fira Code', monospace;
+      --font-main: 'Noto Sans TC', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: var(--font-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(6, 182, 212, 0.12) 0%, transparent 40%);
+      background-attachment: fixed;
+    }
+
+    /* Header Nav */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+      background: rgba(11, 13, 23, 0.7);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--font-code);
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--accent-cyan);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent-cyan);
+      text-shadow: 0 0 8px rgba(6, 182, 212, 0.6);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 6rem 0 3rem 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .section-title i {
+      color: var(--accent-cyan);
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--card-border), transparent);
+      margin-left: 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 4rem;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-family: var(--font-code);
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid var(--primary);
+      color: var(--accent-cyan);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--accent-cyan);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      max-width: 650px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.8rem 1.8rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #4f46e5);
+      color: white;
+      box-shadow: 0 4px 20px var(--primary-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(99, 102, 241, 0.6);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--accent-cyan);
+    }
+
+    /* Glass Cards */
+    .glass-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .glass-card:hover {
+      border-color: rgba(6, 182, 212, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+    }
+
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.5rem;
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.3rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      color: var(--text-main);
+      font-family: var(--font-code);
+    }
+
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-tag {
+      font-family: var(--font-code);
+      font-size: 0.8rem;
+      color: var(--accent-cyan);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .project-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      color: #fff;
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-highlights {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-highlights li {
+      color: var(--text-main);
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+      position: relative;
+      padding-left: 1.2rem;
+    }
+
+    .project-highlights li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--accent-pink);
+    }
+
+    /* 12-Month Roadmap Grid */
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .roadmap-card {
+      background: rgba(15, 20, 38, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 1.2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .roadmap-month {
+      font-family: var(--font-code);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 0.6rem;
+    }
+
+    .tag-tech { background: rgba(99, 102, 241, 0.2); color: #a5b4fc; }
+    .tag-hum { background: rgba(236, 72, 153, 0.2); color: #f472b6; }
+    .tag-life { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; }
+    .tag-maker { background: rgba(245, 158, 11, 0.2); color: #fcd34d; }
+
+    .roadmap-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .roadmap-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Essays Section */
+    .essay-card {
+      border-left: 4px solid var(--accent-cyan);
+      padding-left: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .essay-title {
+      font-size: 1.4rem;
+      color: #fff;
+      margin-bottom: 0.8rem;
+    }
+
+    .essay-quote {
+      font-style: italic;
+      color: #d1d5db;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 1rem 1.2rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      border-left: 2px solid var(--primary);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 3rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-links a {
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--accent-cyan);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .about-grid { grid-template-columns: 1fr; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">&lt;LEO <span>HSIAO</span> /&gt;</a>
+    <nav>
+      <ul>
+        <li><a href="#about">關於我</a></li>
+        <li><a href="#projects">專案與實踐</a></li>
+        <li><a href="#roadmap">自主學習地圖</a></li>
+        <li><a href="#thoughts">人文思辨</a></li>
+        <li><a href="#contact">聯絡我</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-tag"><i class="fa-solid fa-brain"></i> 認知科學 × 人文科技 跨域探索者</div>
+        <h1>蕭立閎 Leo Hsiao</h1>
+        <div class="hero-subtitle">台北市立成功高級中學 | 清華大學人文與社會科學人才培育計畫</div>
+        <p>在科技蓬勃發展的當下，我不只關注技術的硬核邊界，更專注於「技術背後的人」。從高齡輔具同理設計、元宇宙虛擬導覽到科普轉譯，致力於讓科技成為人與人之間連結與學習的橋樑。</p>
+        <div class="cta-buttons">
+          <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> 瀏覽歷年成果</a>
+          <a href="https://instagram.com/leohsiao1015" target="_blank" class="btn btn-outline"><i class="fa-brands fa-instagram"></i> 追蹤 Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2 class="section-title"><i class="fa-solid fa-user-gear"></i> 關於我 About Me</h2>
+      <div class="about-grid">
+        <div class="glass-card about-text">
+          <p>我是蕭立閎，目前就讀成功高中一年級。我是一個喜歡「拆解規則、找出運作方式」的人。在過去的探索中，我同時接觸了程式語言、Arduino、AR/VR 等「硬科技」，以及劇本創作、展覽導覽等「軟人文」。</p>
+          <p>我發現，不論是撰寫系統演算法，還是編寫故事劇本，核心永遠都在於：<strong>「人到底是怎麼想的？什麼樣的互動設計才能真正打動並幫助一個人？」</strong></p>
+          <div class="badge-list">
+            <span class="badge">#清大人社計畫</span>
+            <span class="badge">#認知科學</span>
+            <span class="badge">#以人為本設計</span>
+            <span class="badge">#科普知識轉譯</span>
+            <span class="badge">#AR/VR元宇宙</span>
+            <span class="badge">#Edge AI</span>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <h3 style="margin-bottom: 1rem; color: var(--accent-cyan); font-size: 1.1rem;"><i class="fa-solid fa-award"></i> 榮譽關鍵字</h3>
+          <ul style="list-style: none; color: var(--text-muted); font-size: 0.95rem; line-height: 2;">
+            <li>🏆 臺北市元宇宙創作競賽 VR/AR 特別獎</li>
+            <li>🏆 全國科學探究競賽《這樣教我就懂》兩度入選</li>
+            <li>🏆 臺北市兒童深耕閱讀劇本徵件 優選/佳作</li>
+            <li>🎨 廣達《游於藝》藝術導覽志工 30hrs</li>
+            <li>🎤 校內閩南語情境式演說 連續兩年優勝</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> 核心專案與實踐 Projects</h2>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="glass-card project-card">
+          <div>
+            <div class="project-tag">HUMANITY & ASSISTIVE TECH</div>
+            <h3 class="project-title">高齡者智慧復健工具開發</h3>
+            <p class="project-desc">源於對 98 歲跌倒長輩的同理關懷，結合 Arduino 超音波感測器、光敏電阻與 Gmail 自動通報系統，自主開發的復健輔助機器。</p>
+            <ul class="project-highlights">
+              <li><strong>設計思維轉折：</strong> 發現 LCD 文字高齡者閱讀困難後，改採「蜂鳴器音階變化」提供即時聲音回饋。</li>
+              <li><strong>實踐價值：</strong> 體會到科技的終點不是複雜技術，而是同理感知。</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="glass-card project-card">
+          <div>
+            <div class="project-tag">DIGITAL CURATION & METAVERSE</div>
+            <h3 class="project-title">AR/VR 校園藝術虛擬畫廊</h3>
+            <p class="project-desc">運用 MAKAR XR 平台架設虛擬展間，規劃第一人稱沉浸式動線，將校園藝術創作帶入元宇宙世界。</p>
+            <ul class="project-highlights">
+              <li><strong>榮譽肯定：</strong> 榮獲臺北市 111 年元宇宙文化藝術創作競賽 VR 特別獎 & AR 特別獎。</li>
+              <li><strong>介面探索：</strong> 深入思考虛擬空間中按鈕位置與動線如何引導使用者的行為感知。</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="glass-card project-card">
+          <div>
+            <div class="project-tag">SCIENCE INQUIRY & TRANSLATION</div>
+            <h3 class="project-title">全國科學探究《這樣教我就懂》</h3>
+            <p class="project-desc">將硬核科學原理拆解轉化為手繪繪本，包含《尋找冠軍紙飛機》與《夏日冰品大解謎》，站在大眾視角進行生活化轉譯。</p>
+            <ul class="project-highlights">
+              <li><strong>榮譽肯定：</strong> 2019 與 2020 連續兩度榮獲全國科學探究競賽入選。</li>
+              <li><strong>轉譯能力：</strong> 練就將複雜機制轉化為易懂語言的邏輯思維。</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 12-Month Roadmap Section -->
+    <section id="roadmap">
+      <h2 class="section-title"><i class="fa-solid fa-compass"></i> 高一 12 個月自主探索藍圖 Roadmap</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">落實 SMART 原則與探索評量卡，以每週 10 小時固定節奏進行「科技 × 人文 × 生命 × 實作」四維度交替學習：</p>
+
+      <div class="roadmap-grid">
+        <div class="roadmap-card">
+          <span class="roadmap-month tag-tech">第 01 月 | 科技</span>
+          <div class="roadmap-title">AI 工具與提示工程</div>
+          <div class="roadmap-desc">Prompt 設計與提問技巧，建立全年學習工作流</div>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-month tag-hum">第 02 月 | 語言</span>
+          <div class="roadmap-title">日文入門與語感</div>
+          <div class="roadmap-desc">50 音讀寫與基礎日常會話，訓練跨文化溝通</div>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-month tag-life">第 03 月 | 生命</span>
+          <div class="roadmap-title">急救認證 (CPR/AED)</div>
+          <div class="roadmap-desc">取得正式急救證書，具備臨場救護應變能力</div>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-month tag-maker">第 04 月 | 實作</span>
+          <div class="roadmap-title">烹飪・掌廚 30 天</div>
+          <div class="roadmap-desc">連續 30 天獨立下廚，培養生活中敏銳的觀察力</div>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-month tag-tech">第 05 月 | 科技</span>
+          <div class="roadmap-title">Python 進階實戰</div>
+          <div class="roadmap-desc">API 串接、自動化腳本與 GitHub 版本控制</div>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-month tag-hum">第 06 月 | 財商</span>
+          <div class="roadmap-title">金融理財素養</div>
+          <div class="roadmap-desc">個人理財、複利觀念與虛擬投資組合分析</div>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-month tag-life">第 07 月 | 心理</span>
+          <div class="roadmap-title">心理學與自我探索</div>
+          <div class="roadmap-desc">Big Five 性格理論、情緒管理與人際心理學</div>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-month tag-maker">第 08 月 | 實作</span>
+          <div class="roadmap-title">運動科學實踐</div>
+          <div class="roadmap-desc">運動生理學與 4 週個人體能訓練計畫設計</div>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-month tag-tech">第 09 月 | 科技</span>
+          <div class="roadmap-title">Jetson Edge AI 實作</div>
+          <div class="roadmap-desc">NVIDIA Jetson SDK、YOLOv8 物件偵測與部署</div>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-month tag-hum">第 10 月 | 權益</span>
+          <div class="roadmap-title">公民法律素養</div>
+          <div class="roadmap-desc">未成年權益、網路隱私與數位個資保護思辨</div>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-month tag-life">第 11 月 | 生命</span>
+          <div class="roadmap-title">動物志工與倫理</div>
+          <div class="roadmap-desc">16 小時收容所服務學習，培養生命平等視角</div>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-month tag-maker">第 12 月 | 實作</span>
+          <div class="roadmap-title">裁縫與服飾結構</div>
+          <div class="roadmap-desc">手縫基礎、布料特性與時尚產業脈絡研究</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thoughts Section -->
+    <section id="thoughts">
+      <h2 class="section-title"><i class="fa-solid fa-lightbulb"></i> 人文思辨與議題觀察 Thoughts</h2>
+      <div class="glass-card">
+        <div class="essay-card">
+          <h3 class="essay-title">為什麼許多「數位學習」最後變成了「假裝在學」？</h3>
+          <div class="essay-quote">
+            「大家戴上 VR 眼鏡、按按按鈕、看著精美的動畫，當下看起來很投入，但實際上去上記住的內容卻很有限。這對我來說有點像『形式上的參與』——系統提供了酷炫的包裝，卻沒有真正刺激使用者主動去好奇或探索。」
+          </div>
+          <p style="color: var(--text-muted);">
+            在參加科學探究與 AR/VR 創作的過程中，我發現許多數位工具只停留在視覺震撼，卻未能觸發使用者內部的認知轉化。我希望結合心理學與互動介面設計，探討如何打造能激發「主動好奇」與「深度沉浸」的次世代數位學習機制。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 class="section-title"><i class="fa-solid fa-paper-plane"></i> 聯絡與交流 Contact</h2>
+      <div class="glass-card" style="text-align: center; padding: 3rem 1rem;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Let's Connect & Explore Together</h3>
+        <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto 2rem auto;">
+          歡迎對認知科學、人文科技跨域、數位策展或自主學習議題感興趣的朋友與我交流討論！
+        </p>
+        <a href="mailto:leohsiao106005@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> 發送 Email (leohsiao106005@gmail.com)</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://instagram.com/leohsiao1015" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:leohsiao106005@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <p>© 2026 蕭立閎 Leo Hsiao. Crafted with Cyber-Humanity Passion.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
