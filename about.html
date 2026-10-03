@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於我 | 蕭立閎 Leo Hsiao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { --bg-color: #0b0d17; --card-bg: rgba(22, 27, 46, 0.65); --card-border: rgba(99, 102, 241, 0.2); --accent-cyan: #06b6d4; --text-main: #f3f4f6; --text-muted: #9ca3af; --font-code: 'Fira Code', monospace; --font-main: 'Noto Sans TC', sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg-color); color: var(--text-main); font-family: var(--font-main); line-height: 1.6; }
+    header { position: fixed; top: 0; width: 100%; z-index: 1000; backdrop-filter: blur(12px); background: rgba(11, 13, 23, 0.8); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: var(--font-code); font-weight: 700; font-size: 1.2rem; color: #fff; text-decoration: none; }
+    .logo span { color: var(--accent-cyan); }
+    nav ul { display: flex; list-style: none; gap: 2rem; }
+    nav a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: 0.3s; }
+    nav a.active, nav a:hover { color: var(--accent-cyan); }
+    .container { max-width: 1000px; margin: 0 auto; padding: 8rem 1.5rem 4rem 1.5rem; }
+    h2 { font-size: 1.8rem; color: #fff; margin-bottom: 1.5rem; border-left: 4px solid var(--accent-cyan); padding-left: 0.8rem; }
+    .glass-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; }
+    .roadmap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .roadmap-item { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 1rem; }
+    footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 2rem 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">&lt;LEO <span>HSIAO</span> /&gt;</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="about.html" class="active">關於我</a></li>
+        <li><a href="projects.html">作品集</a></li>
+        <li><a href="thoughts.html">人文思辨</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <h2>關於我 About Me</h2>
+    <div class="glass-card">
+      <p>我是蕭立閎，目前就讀成功高中一年級，同時參與清華大學人文與社會科學人才培育計畫[span_0](start_span)[span_0](end_span)。我習慣透過「拆解規則」來理解世界[span_1](start_span)[span_1](end_span)，並相信科技與人文社科的跨域結合是未來的關鍵[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span)。</p>
+    </div>
+
+    <h2>高一 12 個月自主探索藍圖</h2>
+    <div class="roadmap-grid">
+      <div class="roadmap-item"><strong>M01 AI 提示工程</strong><p style="font-size:0.85rem; color:var(--text-muted)">工作流建立</p></div>
+      <div class="roadmap-item"><strong>M02 日文入門</strong><p style="font-size:0.85rem; color:var(--text-muted)">基礎會話與語感</p></div>
+      <div class="roadmap-item"><strong>M03 急救認證</strong><p style="font-size:0.85rem; color:var(--text-muted)">CPR/AED 考照</p></div>
+      <div class="roadmap-item"><strong>M04 烹飪掌廚</strong><p style="font-size:0.85rem; color:var(--text-muted)">獨立下廚 30 天</p></div>
+      <div class="roadmap-item"><strong>M05 Python 進階</strong><p style="font-size:0.85rem; color:var(--text-muted)">API 與 GitHub</p></div>
+      <div class="roadmap-item"><strong>M06 金融理財</strong><p style="font-size:0.85rem; color:var(--text-muted)">資產配置概念</p></div>
+      <div class="roadmap-item"><strong>M07 心理學探索</strong><p style="font-size:0.85rem; color:var(--text-muted)">Big Five 與自我認識</p></div>
+      <div class="roadmap-item"><strong>M08 運動科學</strong><p style="font-size:0.85rem; color:var(--text-muted)">體能訓練實踐</p></div>
+      <div class="roadmap-item"><strong>M09 Jetson Edge AI</strong><p style="font-size:0.85rem; color:var(--text-muted)">電腦視覺推論</p></div>
+      <div class="roadmap-item"><strong>M10 公民法律</strong><p style="font-size:0.85rem; color:var(--text-muted)">個資與隱私權益</p></div>
+      <div class="roadmap-item"><strong>M11 動物志工</strong><p style="font-size:0.85rem; color:var(--text-muted)">16hr 服務學習</p></div>
+      <div class="roadmap-item"><strong>M12 裁縫與服飾</strong><p style="font-size:0.85rem; color:var(--text-muted)">手作與時尚脈絡</p></div>
+    </div>
+  </main>
+  <footer>
+    <p>© 2026 蕭立閎 Leo Hsiao.</p>
+  </footer>
+</body>
+</html>
