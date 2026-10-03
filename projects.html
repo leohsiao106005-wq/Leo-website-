@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作品集 | 蕭立閎 Leo Hsiao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { --bg-color: #0b0d17; --card-bg: rgba(22, 27, 46, 0.65); --card-border: rgba(99, 102, 241, 0.2); --accent-cyan: #06b6d4; --text-main: #f3f4f6; --text-muted: #9ca3af; --font-code: 'Fira Code', monospace; --font-main: 'Noto Sans TC', sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg-color); color: var(--text-main); font-family: var(--font-main); line-height: 1.6; }
+    header { position: fixed; top: 0; width: 100%; z-index: 1000; backdrop-filter: blur(12px); background: rgba(11, 13, 23, 0.8); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: var(--font-code); font-weight: 700; font-size: 1.2rem; color: #fff; text-decoration: none; }
+    .logo span { color: var(--accent-cyan); }
+    nav ul { display: flex; list-style: none; gap: 2rem; }
+    nav a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: 0.3s; }
+    nav a.active, nav a:hover { color: var(--accent-cyan); }
+    .container { max-width: 1000px; margin: 0 auto; padding: 8rem 1.5rem 4rem 1.5rem; }
+    h2 { font-size: 1.8rem; color: #fff; margin-bottom: 1.5rem; border-left: 4px solid var(--accent-cyan); padding-left: 0.8rem; }
+    .project-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.8rem; margin-bottom: 1.5rem; }
+    .tag { font-family: var(--font-code); color: var(--accent-cyan); font-size: 0.85rem; }
+    footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 2rem 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">&lt;LEO <span>HSIAO</span> /&gt;</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="about.html">關於我</a></li>
+        <li><a href="projects.html" class="active">作品集</a></li>
+        <li><a href="thoughts.html">人文思辨</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <h2>專案與實踐 Portfolio</h2>
+
+    <div class="project-card">
+      <span class="tag">HUMANITY & ASSISTIVE TECH</span>
+      <h3 style="color:#fff; margin: 0.5rem 0;">高齡者智慧復健工具開發</h3>
+      <p style="color:var(--text-muted);">為幫助 98 歲跌倒的曾祖母進行長期復健，結合超音波感測器、光敏電阻與 Gmail 通報功能[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span)。發現 LCD 顯示對高齡者不友善後，改用蜂鳴器音階提供音效回饋，展現以人為本的同理思維[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span)。</p>
+    </div>
+
+    <div class="project-card">
+      <span class="tag">DIGITAL CURATION & METAVERSE</span>
+      <h3 style="color:#fff; margin: 0.5rem 0;">AR/VR 校園藝術虛擬畫廊</h3>
+      <p style="color:var(--text-muted);">榮獲臺北市元宇宙文化藝術創作競賽 VR 特別獎 & AR 特別獎[span_8](start_span)[span_8](end_span)[span_9](start_span)[span_9](end_span)。將藝術創作轉化為虛擬展覽，規劃第一人稱沉浸式導覽介面[span_10](start_span)[span_10](end_span)。</p>
+    </div>
+
+    <div class="project-card">
+      <span class="tag">SCIENCE INQUIRY & POPULAR SCIENCE</span>
+      <h3 style="color:#fff; margin: 0.5rem 0;">全國科學探究繪本《這樣教我就懂》</h3>
+      <p style="color:var(--text-muted);">兩度入選全國科學探究競賽（《尋找冠軍紙飛機》與《夏日冰品大解謎》）[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span)，將硬核科學原理生活化轉譯為繪本故事[span_13](start_span)[span_13](end_span)。</p>
+    </div>
+  </main>
+  <footer>
+    <p>© 2026 蕭立閎 Leo Hsiao.</p>
+  </footer>
+</body>
+</html>
