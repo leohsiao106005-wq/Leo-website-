@@ -11,7 +11,7 @@
     :root { --bg-color: #0b0d17; --card-bg: rgba(22, 27, 46, 0.65); --card-border: rgba(99, 102, 241, 0.2); --accent-cyan: #06b6d4; --text-main: #f3f4f6; --text-muted: #9ca3af; --font-code: 'Fira Code', monospace; --font-main: 'Noto Sans TC', sans-serif; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background-color: var(--bg-color); color: var(--text-main); font-family: var(--font-main); line-height: 1.6; }
-    header { position: fixed; top: 0; width: 100%; z-index: 1000; backdrop-filter: blur(12px); background: rgba(11, 13, 23, 0.8); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    header { position: fixed; top: 0; width: 100%; z-index: 1000; backdrop-filter: blur(12px); background: rgba(11, 13, 23, 0.85); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
     .logo { font-family: var(--font-code); font-weight: 700; font-size: 1.2rem; color: #fff; text-decoration: none; }
     .logo span { color: var(--accent-cyan); }
     nav ul { display: flex; list-style: none; gap: 2rem; }
@@ -22,7 +22,8 @@
     .glass-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; }
     .roadmap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
     .roadmap-item { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 1rem; }
-    footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 2rem 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+    footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 2rem 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 4rem; }
+    footer a { color: var(--accent-cyan); text-decoration: none; margin: 0 0.5rem; }
   </style>
 </head>
 <body>
@@ -40,7 +41,8 @@
   <main class="container">
     <h2>關於我 About Me</h2>
     <div class="glass-card">
-      <p>我是蕭立閎，目前就讀成功高中一年級，同時參與清華大學人文與社會科學人才培育計畫[span_0](start_span)[span_0](end_span)。我習慣透過「拆解規則」來理解世界[span_1](start_span)[span_1](end_span)，並相信科技與人文社科的跨域結合是未來的關鍵[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span)。</p>
+      <p style="margin-bottom: 1rem;">我是蕭立閎，目前就讀成功高中一年級，同時參與清華大學人文與社會科學人才培育計畫。</p>
+      <p>我習慣透過「拆解規則」來理解世界，並相信科技與人文社科的跨域結合是未來的關鍵。不論是編寫演算法、設計高齡輔具，還是撰寫故事劇本，我始終專注於「人是如何思考與感受的」。</p>
     </div>
 
     <h2>高一 12 個月自主探索藍圖</h2>
@@ -60,7 +62,7 @@
     </div>
   </main>
   <footer>
-    <p>© 2026 蕭立閎 Leo Hsiao.</p>
+    <p>© 2026 蕭立閎 Leo Hsiao | <a href="https://instagram.com/leohsiao1015" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a> | <a href="mailto:leohsiao106005@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a></p>
   </footer>
 </body>
 </html>
