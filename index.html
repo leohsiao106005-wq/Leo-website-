@@ -22,7 +22,7 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background-color: var(--bg-color); color: var(--text-main); font-family: var(--font-main); line-height: 1.6; }
-    header { position: fixed; top: 0; width: 100%; z-index: 1000; backdrop-filter: blur(12px); background: rgba(11, 13, 23, 0.8); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    header { position: fixed; top: 0; width: 100%; z-index: 1000; backdrop-filter: blur(12px); background: rgba(11, 13, 23, 0.85); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
     .logo { font-family: var(--font-code); font-weight: 700; font-size: 1.2rem; color: #fff; text-decoration: none; }
     .logo span { color: var(--accent-cyan); }
     nav ul { display: flex; list-style: none; gap: 2rem; }
@@ -30,11 +30,13 @@
     nav a.active, nav a:hover { color: var(--accent-cyan); }
     .container { max-width: 1000px; margin: 0 auto; padding: 8rem 1.5rem 4rem 1.5rem; }
     .hero h1 { font-size: 3rem; margin-bottom: 1rem; background: linear-gradient(135deg, #fff, #a5b4fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; }
-    .btn { padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin-right: 1rem; }
+    .hero p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; max-width: 650px; }
+    .btn { padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; margin-right: 1rem; margin-bottom: 1rem; }
     .btn-primary { background: var(--primary); color: white; }
     .btn-outline { border: 1px solid var(--card-border); color: var(--text-main); }
+    .social-section { margin-top: 3rem; padding: 2rem; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; }
     footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 2rem 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 4rem; }
+    footer a { color: var(--accent-cyan); text-decoration: none; margin: 0 0.5rem; }
   </style>
 </head>
 <body>
@@ -53,16 +55,23 @@
     <section class="hero">
       <p style="color: var(--accent-cyan); font-family: var(--font-code); margin-bottom: 0.5rem;">Hello, World! 我是</p>
       <h1>蕭立閎 Leo Hsiao</h1>
-      <p>成功高中高一 | 清華大學人文與社會科學人才培育計畫</p>
-      <p>在科技蓬勃發展的當下，我專注於「技術背後的人」。探索認知科學與人文科技跨域的無限可能。</p>
+      <p style="font-size: 1.2rem; color: #a5b4fc; margin-bottom: 1rem;">成功高中高一 | 清華大學人文與社會科學人才培育計畫</p>
+      <p>在科技蓬勃發展的當下，我專注於「技術背後的人」。探索認知科學與人文科技跨域的無限可能，讓科技成為連結人與學習的橋樑。</p>
       <div>
         <a href="projects.html" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> 查看作品集</a>
         <a href="about.html" class="btn btn-outline"><i class="fa-solid fa-user"></i> 關於我</a>
       </div>
+
+      <div class="social-section">
+        <h3 style="margin-bottom: 1rem; color: #fff;">與我聯絡 Let's Connect</h3>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">歡迎交流討論認知科學、人文科技或自主學習等相關議題！</p>
+        <a href="https://instagram.com/leohsiao1015" target="_blank" class="btn btn-outline"><i class="fa-brands fa-instagram"></i> IG: @leohsiao1015</a>
+        <a href="mailto:leohsiao106005@gmail.com" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> leohsiao106005@gmail.com</a>
+      </div>
     </section>
   </main>
   <footer>
-    <p>© 2026 蕭立閎 Leo Hsiao. <a href="https://instagram.com/leohsiao1015" style="color:var(--accent-cyan);" target="_blank">Instagram</a> | <a href="mailto:leohsiao106005@gmail.com" style="color:var(--accent-cyan);">Email</a></p>
+    <p>© 2026 蕭立閎 Leo Hsiao | <a href="https://instagram.com/leohsiao1015" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a> | <a href="mailto:leohsiao106005@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a></p>
   </footer>
 </body>
 </html>
